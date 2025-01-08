@@ -2,11 +2,27 @@
     padding: 1rem;
     display: flex;
     align-items: center;
-    justify-content: space-around;  
+    justify-content: space-around; 
+    
     
   
     &--logo {
       width: 50px;
+    }
+
+    &--redes{
+      display: flex;
+      gap: 20px;
+
+      a{
+        cursor: pointer;
+        &:hover{
+          transform: scale(1.2);
+        }
+        img{
+          width: 35px;
+        }
+      }
     }
   
     &--nav {
@@ -24,6 +40,7 @@
           color: $text-color-dark;
           font-size: 1.5rem;
           width: 100%;
+          letter-spacing: 3px;
           &:hover {
             color: #fefefe;
           }
