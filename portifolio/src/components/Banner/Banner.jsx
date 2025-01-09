@@ -1,6 +1,7 @@
 import React from 'react'
 import foto from '../../assets/img/foto-perfil.jpg';
 
+
 function Banner() {
   return (
     <>
@@ -11,6 +12,7 @@ function Banner() {
                 <img src={foto} />
 
             </div>
+            
             
 
         </section>

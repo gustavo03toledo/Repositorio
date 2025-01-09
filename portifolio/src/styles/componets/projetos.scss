@@ -1,0 +1,78 @@
+.project-cards {
+    margin: 5vw;
+    text-align: center;
+  
+    &--title {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  
+    &--grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+  
+    .project-card {
+      background: #272727;
+      padding: 2vw;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      
+  
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+      }
+  
+      &--image {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 3px;
+        
+      }
+  
+      &--name {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+        
+      }
+      &--description{
+        min-height: 20vh;
+      }
+      
+  
+      &--links {
+        display: flex;
+        justify-content: space-around;
+        padding: 1rem;
+        gap: 2vh;
+        flex-wrap: wrap;
+  
+        &--link {
+            text-decoration: none;            
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1vw;
+            
+            letter-spacing: px;
+            
+            color:  #fefefe;
+            &:hover {
+
+                transform: scale(1.1);
+                background: linear-gradient(90deg, $gradient-color-1 0%, $gradient-color-2 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+      }
+    }
+  }
+  

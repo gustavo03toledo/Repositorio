@@ -1,9 +1,10 @@
 .banner{
-    margin-top: 2vw;
+    margin: 2vw;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5vw;
+    height: 80vh;
 
 
     &--texto{
@@ -26,5 +27,12 @@
 
     @media (max-width: 768px){
         flex-direction: column-reverse;
+        margin: 2vw 5vw ;
+        text-align: center;
+        &--texto{
+            b{
+                display: block;
+            }
+        }
     }
 }
