@@ -31,6 +31,9 @@ $title-font-size: 3rem;
 .titulo{
     font-size: $title-font-size;
     letter-spacing: 3px;
+    @media (max-width: 768px){
+      font-size: 2rem;
+    }
 }
 
 .texto{

@@ -5,8 +5,8 @@ const projects = [
     name: 'Fokus',
     description: 'Um site de controle de tempo baseado na técnica Pomodoro, desenvolvido para ajudar nos estudos e produtividade. O projeto inclui temporizadores personalizáveis para ciclos de estudo e descanso, além de um alarme integrado.',
     image: projetoFokus, 
-    portfolioLink: 'https://fokus-ow2pzcajh-gustavo03toledo.vercel.app/',
-    projectLink: 'https://github.com/gustavo03toledo/fokus',
+    portfolioLink: 'https://github.com/gustavo03toledo/fokus',
+    projectLink: 'https://fokus-ow2pzcajh-gustavo03toledo.vercel.app/',
   },
   {
     name: 'Minha Padaria',

@@ -8,11 +8,11 @@ import Projetos from '../components/Projetos/projetos';
 
 function Home () {
     return(
-        <>
+        <div className='container-home'>
            <Banner />
            <Stack />
            <Projetos />
-        </>
+        </div>
     )
 }
 
