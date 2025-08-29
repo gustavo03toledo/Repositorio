@@ -1,3 +1,5 @@
+@import '../utils/variables' ;
+
 .header {
     padding: 1rem 0;
     display: flex;
@@ -7,32 +9,44 @@
     @media (max-width: 768px){
       justify-content: space-between; 
       margin-left: 20px;
-      
     }
-    
-    
-    
   
-    &--logo {
-      width: 50px;
-    }
-
-    &--redes{
+    &__redes {
       display: flex;
       gap: 20px;
+    }
 
-      a{
-        cursor: pointer;
-        &:hover{
-          transform: scale(1.2);
+    &__icon {
+        width: 35px;
+        height: 35px;
+        background-color: $text-color-dark;
+        transition: transform 0.3s ease, background-position 0.4s ease;
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: contain;
+        background-image: linear-gradient(90deg, $gradient-color-1 0%, $gradient-color-2 100%);
+        background-size: 200% 100%;
+        background-position: 100% 0;
+
+        &--linkedin {
+            mask-image: url('../../assets/icons/icon-linkedin-dark.svg');
+            -webkit-mask-image: url('../../assets/icons/icon-linkedin-dark.svg');
         }
-        img{
-          width: 35px;
+
+        &--github {
+            mask-image: url('../../assets/icons/icon-github-dark.svg');
+            -webkit-mask-image: url('../../assets/icons/icon-github-dark.svg');
         }
-      }
+    }
+
+    &__redes a:hover .header__icon {
+        background-position: 0 0;
+        transform: scale(1.15);
     }
   
     &--nav {
+// ... (o resto do seu código do nav e hamburger)
       display: flex;  
       &--btn {
         background-color: transparent;
