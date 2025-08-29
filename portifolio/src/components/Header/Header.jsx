@@ -1,40 +1,34 @@
 import React, { useState } from 'react';
-import logo from'../../assets/icons/logo-css.svg';
-import linkedin from '../../assets/icons/icon-linkedin-dark.svg';
-import github from '../../assets/icons/icon-github-dark.svg';
+
 function Header() {
-  
+  const [menuOpen, setMenuOpen] = useState(false);
 
-const [menuOpen, setMenuOpen] = useState(false);
-
-const navItems = [
+  const navItems = [
     { label: 'Home', link: '/' },
     { label: 'Sobre', link: '/sobre' },
     { label: 'Projetos', link: '/projetos' },
     { label: 'Contato', link: '/contato' }
-];
+  ];
 
-const toggleMenu = () => setMenuOpen(!menuOpen);
+  const toggleMenu = () => setMenuOpen(!menuOpen);
 
-return (
+  return (
     <header className='header'>
       
-      <div className='header--redes'>
-        <a href="https://www.linkedin.com/in/gustavo-toledo-4b3018259">
-          <img src={linkedin} alt="" />
+      <div className='header__redes'>
+        <a href="https://www.linkedin.com/in/gustavo-toledo-4b3018259" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <div className="header__icon header__icon--linkedin"></div>
         </a>
-        <a href="https://github.com/gustavo03toledo">
-          <img src={github} alt="" />
+        <a href="https://github.com/gustavo03toledo" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <div className="header__icon header__icon--github"></div>
         </a>
       </div>
-
 
       <div className='header--hamburger' onClick={toggleMenu}>
         <div className={`line ${menuOpen ? 'open' : ''}`}></div>
         <div className={`line ${menuOpen ? 'open' : ''}`}></div>
         <div className={`line ${menuOpen ? 'open' : ''}`}></div>
       </div>
-      
       
       <nav className={`header--nav ${menuOpen ? 'open' : ''}`}>
         {navItems.map((item, index) => (

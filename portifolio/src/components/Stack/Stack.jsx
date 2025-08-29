@@ -10,6 +10,7 @@ import vscode from '../../assets/icons/logo-vscode.svg';
 import sass from '../../assets/icons/logo-sass.svg';
 import react from '../../assets/icons/logo-react.svg';
 import github from '../../assets/icons/logo-github.svg';
+import mongodb from '../../assets/icons/icon-mongodb.svg';
 
 const logoStack = [
   { src: bootstrap, alt: 'Bootstrap' },
@@ -23,12 +24,13 @@ const logoStack = [
   { src: sass, alt: 'Sass' },
   { src: react, alt: 'React' },
   { src: github, alt: 'Github' },
+  { src: mongodb, alt: 'MongoDB' },
 ];
 
-function Stack() {
+function Stack({ className }) {
   return (
     <>
-      <section className="stack">
+      <section className={`stack ${className || ''}`}>
         <h2 className="stack--titulo titulo">Habilidades</h2>
         <p className="stack--texto texto">
           Confira algumas das habilidades que estou desenvolvendo e aperfeiçoando continuamente.
