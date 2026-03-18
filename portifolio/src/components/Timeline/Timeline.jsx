@@ -1,5 +1,5 @@
 import React from 'react';
-import './../../styles/componets/timeline.scss';
+import './../../styles/components/timeline.scss';
 
 const semestersData = [
     {
