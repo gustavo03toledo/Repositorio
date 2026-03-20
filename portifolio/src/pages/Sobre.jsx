@@ -6,13 +6,13 @@ import Timeline from '../components/Timeline/Timeline';
 
 const Sobre = () => {
   return (
-    <main className="sobre-container">
+    <main className="sobre-container container">
       {/* Seção de Introdução com Storytelling */}
-      <section className="sobre">
-        <div className="sobre__foto">
+      <section className="sobre reveal-top">
+        <div className="sobre__foto reveal-left">
           <img src={fotoPerfil} alt="Foto de Gustavo Toledo" />
         </div>
-        <div className="sobre__descricao">
+        <div className="sobre__descricao reveal-right">
           <h1 className="sobre__titulo text-gradient">De Processos a Código: Minha Jornada na Tecnologia</h1>
           <p className="sobre__texto">
             Sempre fui movido pela curiosidade de entender como as coisas funcionam. Essa paixão por processos, organização e clareza me guiou em uma transição de carreira decisiva para a área de tecnologia. Hoje, como estudante de Desenvolvimento de Software Multiplataforma na FATEC, encontrei no código a ferramenta ideal para transformar ideias em soluções práticas.
@@ -24,7 +24,7 @@ const Sobre = () => {
       </section>
 
       {/* Seção "O que eu faço" */}
-      <section className="o-que-faco">
+      <section className="o-que-faco reveal-bottom">
         <h2 className="section-titulo text-gradient">O que eu faço</h2>
         <ul className="o-que-faco__lista">
           <li>Desenvolvimento Front-End com <strong>JavaScript, HTML5, CSS3 e React</strong>.</li>
@@ -36,7 +36,7 @@ const Sobre = () => {
       </section>
 
       {/* Seção Formação */}
-      <section className="formacao">
+      <section className="formacao reveal-left">
           <h2 className="section-titulo text-gradient">Formação</h2>
           <p className="formacao__texto">
               <strong>Desenvolvimento de Software Multiplataforma</strong>
@@ -44,13 +44,18 @@ const Sobre = () => {
               FATEC - Cotia | Previsão de formatura: Julho/2026
           </p>
       </section>
-      <Timeline />
+
+      <div className="reveal-bottom">
+         <Timeline />
+      </div>
 
       {/* Seção de Habilidades/Stack */}
-      <Stack className="stack--small" />
+      <div className="reveal-top">
+         <Stack className="stack--small" />
+      </div>
 
       {/* Seção Call to Action */}
-      <section className="call-to-action">
+      <section className="call-to-action reveal-bottom">
         <h2 className="section-titulo text-gradient">Vamos construir algo incrível juntos?</h2>
         <p className="call-to-action__texto">
           Estou sempre aberto a novas oportunidades e colaborações. Se você tem um projeto em mente ou acredita que meu perfil se encaixa na sua equipe, vamos nos conectar!

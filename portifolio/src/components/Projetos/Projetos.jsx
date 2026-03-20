@@ -7,7 +7,7 @@ import projects from '../ProjectsArray/ProjectArray';
 
 function Projetos() {
   return (
-    <section className="project-cards">
+    <section className="project-cards reveal-stagger">
       <h2 className="project-cards--title titulo">Meus Projetos</h2>
       <div className="project-cards--grid">
         {projects.map((project, index) => (

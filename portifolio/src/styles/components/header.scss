@@ -136,4 +136,23 @@
       }
     }
   }
-  
+
+// Header container wrapper
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(25, 25, 25, 0.95);
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+    &--nav {
+        @media (max-width: 768px) {
+            z-index: 1001;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            top: 60px; // ensure it doesn't overlap the header toggle
+        }
+    }
+}

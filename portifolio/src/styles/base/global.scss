@@ -1,18 +1,45 @@
-@import '../utils/variables.scss'; 
+@import '../utils/variables.scss';
+
+html {
+    scroll-behavior: smooth;
+}
 
 body{
     font-size: $base-font-size;
     font-family: $font-family;
+    font-weight: 400;
     background-color: $background-dark;
     color: $text-color-dark;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 button {
     cursor: pointer;
     border: none;
+    background: transparent;
+    font-family: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: $spacing-sm;
+    font-weight: 600;
+}
+
+// Reusable Utilities
+.container {
+    max-width: $max-content-width;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+}
+
+// Main Content padding to offset fixed header
+.content {
+    padding-top: 100px;
+    min-height: calc(100vh - 150px);
 }
